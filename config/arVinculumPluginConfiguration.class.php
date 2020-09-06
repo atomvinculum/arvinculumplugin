@@ -17,10 +17,10 @@
  * along with Access to Memory (AtoM).  If not, see <http://www.gnu.org/licenses/>.
  */
 
-class arDominionPluginConfiguration extends sfPluginConfiguration
+class arVinculumPluginConfiguration extends sfPluginConfiguration
 {
   public static
-    $summary = 'Theme plugin made from scratch with some JavaScript magic. Cross-browser compatibility tested. Based in Twitter Bootstrap 2.0, 940px two-column layout, slightly responsive.',
+    $summary = 'Theme plugin based on Dominion for the project Vinculum, based on ArDominiumPlugin.',
     $version = '0.0.1';
 
   public function contextLoadFactories(sfEvent $event)
@@ -32,11 +32,11 @@ class arDominionPluginConfiguration extends sfPluginConfiguration
     if ($context->getConfiguration()->isDebug())
     {
       $context->response->addJavaScript('/vendor/less.js');
-      $context->response->addStylesheet('/plugins/arDominionPlugin/css/main.less', 'last', array('rel' => 'stylesheet/less', 'type' => 'text/css', 'media' => 'all'));
+      $context->response->addStylesheet('/plugins/arVinculumPlugin/css/main.less', 'last', array('rel' => 'stylesheet/less', 'type' => 'text/css', 'media' => 'all'));
     }
     else
     {
-      $context->response->addStylesheet('/plugins/arDominionPlugin/css/main.css', 'last', array('media' => 'all'));
+      $context->response->addStylesheet('/plugins/arVinculumPlugin/css/main.css', 'last', array('media' => 'all'));
     }
   }
 
